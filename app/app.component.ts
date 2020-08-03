@@ -8,12 +8,15 @@ import { Component } from '@angular/core';
       <h1 [innerHTML]="title"></h1>
       <h1>{{ title }}</h1>
       <img [src]="logo">
+      <input type="text" [value]="name">
+      <div>{{ name }}</div>
     </div>
   `
 })
 export class AppComponent {
   title: string;
   logo: string = 'img/logo.svg'
+  name: string = 'todd';
   constructor() {;
     this.title = 'Ultimate Angular';
   }
