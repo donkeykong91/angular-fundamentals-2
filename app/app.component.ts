@@ -5,13 +5,8 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
   template: `
     <div class="app">
-      {{ title + '!' }}
-      <div>
-        {{ numberOne + numberTwo }}
-      </div>
-      <div>
-        {{ isHappy ? ':)' : ':(' }}
-      </div>
+      <h1 [innerHTML]="title"></h1>
+      <h1>{{ title }}</h1>
     </div>
   `
 })
