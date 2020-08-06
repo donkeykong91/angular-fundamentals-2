@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
         type="text" 
         [value]="name" 
         (input)="handleChange($event.target.value)">
-      
+
       <template [ngIf]="name.length > 2">
         <div>
           Searching for... {{ name }}
