@@ -4,7 +4,7 @@ interface Passenger {
   id: number,
   fullname: string,
   checkedIn: boolean,
-  checkInDate: number | null
+  checkInDate?: number
 }
 
 @Component({
@@ -19,10 +19,9 @@ interface Passenger {
             class="status"
             [class.checked-in]="passenger.checkedIn"></span>
           {{ i }}: {{ passenger.fullname }}
-          <p>{{ passenger | json }}</p>
+          <p> {{ passenger | json }}</p>
           <div class="date">
-            Check in date: 
-            {{ passenger.checkInDate ? (passenger.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
+            Check in date: {{ passenger.checkInDate ? (passenger.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
           </div>
         </li>
       </ul>
